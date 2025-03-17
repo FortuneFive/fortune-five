@@ -35,7 +35,7 @@
 }
 
 .main ol {
-  font-family: var(--font-geist-mono);
+  font-family: var(--font-geist-mono), sans-serif;
   padding-left: 0;
   margin: 0;
   font-size: 14px;
@@ -66,8 +66,7 @@
   border-radius: 128px;
   height: 48px;
   padding: 0 20px;
-  border: none;
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-geist-sans), sans-serif;
   border: 1px solid transparent;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
@@ -95,8 +94,7 @@ button.secondary {
   border-radius: 128px;
   height: 48px;
   padding: 0 20px;
-  border: none;
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-geist-sans), sans-serif;
   border: 1px solid transparent;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
