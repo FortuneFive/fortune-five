@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "fortune-five",
   "private": true,
   "scripts": {
     "build": "turbo run build",
