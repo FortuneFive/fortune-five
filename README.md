@@ -1,56 +1,55 @@
-# Turborepo starter
+# Fortune Five
+> 프로젝트 소개글 작성하기
+---
 
-This Turborepo starter is maintained by the Turborepo core team.
+## 프로젝트 개요
 
-## Using this example
 
-Run the following command:
+## 프로젝트 구조
 
-```sh
-npx create-turbo@latest
-```
 
-## What's inside?
+## 사용 기술
 
-This Turborepo includes the following packages/apps:
 
-### Apps and Packages
+---
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### 개발 환경 실행 방법
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+프로젝트 루트에서 아래 명령어를 실행하세요. 
 
-### Utilities
+```zsh
 
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
+npm run dev # 프론트와 백엔드 앱 동시 실행 시작
 
 ```
-cd my-turborepo
-pnpm build
+
+백엔드 혹은 프론트엔드 앱을 개별적으로 실행시키고 싶다면, `/apps/**` 경로로 이동하여 동일한 명령어를 실행하세요. 
+
+---
+
+### 프로젝트 빌드 방법
+프로젝트 루트 경로에서 아래 명령어를 실행하세요.
+
+```zsh
+npm run build
 ```
 
-### Develop
+프론트엔트 앱을 개별적으로 빌드하고 싶다면, `/apps/frontend` 경로로 이동하여 아래 명령어를 실행하세요.
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
+```zsh
+npm run build
 ```
 
-### Remote Caching
+백엔드 앱을 개별적으로 빌드하고 싶다면, `/apps/backend` 경로로 이동하여 아래 명령어를 실행하세요.
+
+```zsh
+npm run build
+```
+
+---
+
+
+### Remote Caching 활용하기
 
 > [!TIP]
 > Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
@@ -59,7 +58,7 @@ Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo
 
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
 
-```
+```zsh
 cd my-turborepo
 npx turbo login
 ```
@@ -68,17 +67,8 @@ This will authenticate the Turborepo CLI with your [Vercel account](https://verc
 
 Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
 
-```
+```zsh
 npx turbo link
 ```
 
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+---
