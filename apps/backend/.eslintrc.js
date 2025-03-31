@@ -28,6 +28,7 @@ module.exports = {
         { useTabs: false,
           endOfLine: 'lf'
         },
+        'warn'
       ],
   },
 };
