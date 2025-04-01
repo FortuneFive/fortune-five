@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  ## Application Services
+  backend:
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile
+    container_name: fortune5-backend
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://fortune5:1q2w3e4r@postgres:5432/fortune5
+
+#  frontend:
+#    build:
+#      context: ./apps/frontend
+#      dockerfile: Dockerfile
+#    container_name: fortune5-frontend
+#    restart: always
+##    depends_on:
+#    ports:
+#      - "3000:80"
+
+  ## Backing Services
+  postgres:
+    image: postgres:latest
+    container_name: fortune5-pg
+    restart: always
+    environment:
+      POSTGRES_USER: fortune5
+      POSTGRES_PASSWORD: 1q2w3e4r
+      POSTGRES_DB: fortune5
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
