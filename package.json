@@ -23,5 +23,9 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@prisma/adapter-pg": "^6.5.0",
+    "pg": "^8.14.1"
+  }
 }
